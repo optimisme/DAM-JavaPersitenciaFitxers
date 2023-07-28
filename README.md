@@ -29,7 +29,7 @@ Or, from Visual Studio Code:
 "Terminal > Run task > Compile for PowerShell"
 ```
 
-Recommended study order:
+Ordre recomanat d'estudi:
 
 ```
     GestioArxius.java
