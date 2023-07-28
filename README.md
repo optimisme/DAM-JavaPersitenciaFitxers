@@ -1,6 +1,6 @@
-# Exemple de guardar dades amb SQLite #
+# Exemple de guardar dades a arxius #
 
-En aquest projecte hi ha un exemple de com guardar dades en un arxiu gestionat a través de SQLite
+En aquest projecte hi ha diversos exemples de com guardar dades en Java, cap a arxius de text, binaris, XML, CSV i objectes serialitzats
 
 ### Instruccions ###
 
