@@ -52,3 +52,9 @@ Ordre recomanat d'estudi:
     GestioCSV.java
     GestioXML.java
 ```
+
+### Nota ###
+
+Els arxius dins de la carpeta 'src' no s'inclouen dins del .jar final
+
+Per incloure arxius dins del '.jar' final posar-los a la carpeta 'asstes'
