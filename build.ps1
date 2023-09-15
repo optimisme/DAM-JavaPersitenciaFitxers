@@ -1,5 +1,9 @@
 # PowerShell script to build the project
 
+# Use the 'Project/data' folder for initial data.
+# Use the './data' folder for development data (or initial data).
+# Use the './Project/assets' folder to add data into the JAR file.
+
 Clear-Host
 
 $folderDevelopment = "Project"
