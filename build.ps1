@@ -132,7 +132,7 @@ if (Test-Path -Path "./data") {
     Move-Item -Path "./data" -Destination "./$folderRelease/data"
 }
 elseif (Test-Path -Path "./$folderDevelopment/data") {
-    Move-Item -Path "./$folderDevelopment/data" -Destination "./$folderRelease/data"
+    Copy-Item -Path "./$folderDevelopment/data/*" -Destination "./$folderRelease/data" -Recurse
 }
 
 # Move the Project.jar file to the release directory

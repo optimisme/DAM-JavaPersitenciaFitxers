@@ -103,7 +103,7 @@ mkdir -p ./$folderRelease
 if [ -d "./data" ]; then
     mv ./data "./$folderRelease/"
 elif [ -d "./$folderDevelopment/data" ]; then
-    mv ./$folderDevelopment/data "./$folderRelease/"
+    cp -r ./$folderDevelopment/data "./$folderRelease/"
 fi
 
 # Move the Project.jar file to the release directory
