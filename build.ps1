@@ -131,6 +131,9 @@ New-Item -ItemType Directory -Force -Path "./$folderRelease" | Out-Null
 if (Test-Path -Path "./data") {
     Move-Item -Path "./data" -Destination "./$folderRelease/data"
 }
+elseif (Test-Path -Path "./$folderDevelopment/data") {
+    Move-Item -Path "./$folderDevelopment/data" -Destination "./$folderRelease/data"
+}
 
 # Move the Project.jar file to the release directory
 Move-Item ./$folderDevelopment/Project.jar ./$folderRelease/Project.jar
