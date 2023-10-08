@@ -1,22 +1,14 @@
+package com.project;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
 
-// En aquest exemples es
-// llegeix una llista d'objectes
-// serializables des de un arxiu binari
-
-// És pràctic guardar-ho en una llista
-// perquè així no cal saber quants objectes
-// cal llegir
-
-public class LecturaLlistes {
+public class LecturaObjectes {
     public static void main(String args[]) {
         String basePath = System.getProperty("user.dir") + "/data/";
-        String filePath = basePath + "ArxiuEscriuLlistes.dat";
+        String filePath = basePath + "ArxiuEscriuObjectes.dat";
 
         // Crear la carpeta 'data' si no existeix
         File dir = new File(basePath);
@@ -32,16 +24,17 @@ public class LecturaLlistes {
 			FileInputStream fis = new FileInputStream(filePath);
 			ObjectInputStream ois = new ObjectInputStream(fis);
 
-			ArrayList<Objecte> llista = new ArrayList<>(Arrays.asList((Objecte[]) ois.readObject()));
+            Objecte obj0 = (Objecte) ois.readObject();
+            Objecte obj1 = (Objecte) ois.readObject();
 
-            for (int cnt = 0; cnt < llista.size(); cnt = cnt + 1) {
-                System.out.println(llista.get(cnt));
-            }
+            System.out.println(obj0);
+            System.out.println(obj1);
 
-            ois.close();
+			ois.close();
 			fis.close();
 
-        } catch (ClassNotFoundException e) { e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
 		} catch (IOException e) { e.printStackTrace(); }
     }
 }

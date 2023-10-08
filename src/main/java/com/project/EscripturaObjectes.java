@@ -1,17 +1,19 @@
+package com.project;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 
-// En aquest exemples es
-// guarda una llista d'objectes
-// serializables en un arxiu binari
+// En aquest exemple s'escriu un arxiu
+// binari amb objectes JAVA serializables
+// S'hauràn de llegir en el mateix
+// ordre que s'han escrit
 
-public class EscripturaLlistes {
+public class EscripturaObjectes {
     public static void main(String args[]) {
         String basePath = System.getProperty("user.dir") + "/data/";
-        String filePath = basePath + "ArxiuEscriuLlistes.dat";
+        String filePath = basePath + "ArxiuEscriuObjectes.dat";
 
         // Crear la carpeta 'data' si no existeix
         File dir = new File(basePath);
@@ -23,18 +25,16 @@ public class EscripturaLlistes {
 
         System.out.println("");
 
-        Objecte obj0 = new Objecte("Escriptori", "Estudiar");
-        Objecte obj1 = new Objecte("Telèfon", "Perdre el temps");
-
-        ArrayList<Objecte> llista = new ArrayList<>();
-        llista.add(obj0);
-        llista.add(obj1);
-
-		try {
+        try {
 			FileOutputStream fos = new FileOutputStream(filePath);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 
-			oos.writeObject(llista.toArray(new Objecte[0]));
+            Objecte obj0 = new Objecte("Escriptori", "Estudiar");
+            Objecte obj1 = new Objecte("Telèfon", "Perdre el temps");
+
+			oos.writeObject(obj0);
+            oos.writeObject(obj1);
+
 			oos.close();
 			fos.close();
 

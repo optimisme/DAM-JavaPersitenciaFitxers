@@ -1,3 +1,5 @@
+package com.project;
+
 import java.io.Serializable;
 
 public class Objecte implements Serializable {

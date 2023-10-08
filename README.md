@@ -10,26 +10,23 @@ Després executar el client i comprovar com els càlculs obtenen resultat des de
 
 ### Compilació i funcionament ###
 
-A Linux i OSX:
-
-```
-./build.sh
-```
-
-A Windows Powershell:
-
-```
-.\build.ps1
+Cal el 'Maven' per compilar el projecte
+```bash
+mvn clean
+mvn compile
 ```
 
-Or, from Visual Studio Code:
-
-```
-"Terminal > Run task > Compile for UNIX"
-"Terminal > Run task > Compile for PowerShell"
+Per executar el projecte a Windows cal
+```bash
+.\run.ps1 com.project.Main
 ```
 
-Ordre recomanat d'estudi:
+Per executar el projecte a Linux/macOS cal
+```bash
+./run.sh com.project.Main
+```
+
+### Ordre recomanat d'estudi:
 
 ```
     GestioArxius.java
@@ -52,9 +49,3 @@ Ordre recomanat d'estudi:
     GestioCSV.java
     GestioXML.java
 ```
-
-### Nota ###
-
-Els arxius dins de la carpeta 'src' no s'inclouen dins del .jar final
-
-Per incloure arxius dins del '.jar' final posar-los a la carpeta 'asstes'
