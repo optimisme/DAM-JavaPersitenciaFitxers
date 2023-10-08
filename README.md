@@ -26,6 +26,12 @@ Per executar el projecte a Linux/macOS cal
 ./run.sh com.project.Main
 ```
 
+Per fer anar classes específiques amb main:
+```bash
+.\run.ps1 com.project.EscripturaDadesPrimitives
+./run.sh com.project.EscripturaDadesPrimitives
+```
+
 ### Ordre recomanat d'estudi:
 
 ```
